@@ -22,74 +22,14 @@ public class AddressDetail {
         this.email = email;
     }
 
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname() {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname() {
-        this.lastname = lastname;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress() {
-        this.address = address;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity() {
-        this.city = city;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState() {
-        this.state = state;
-    }
-
-    public int getZipcode() {
-        return zipcode;
-    }
-
-    public void setZipcode(int zipcode) {
-        this.zipcode = zipcode;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber() {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail() {
-        this.email = email;
-    }
-
-    @Override
-    public String toString() {
-        return "AddressBook [" + "firstname=" + firstname + ", lastname=" + lastname +
-                ", city=" + city + ", state=" + state + ", zipcode=" + zipcode +
-                ", phoneNumber=" + phoneNumber + ", email=" + email + "]";
+    public void printAddressbook() {
+        System.out.println("First Name:" + this.firstname);
+        System.out.println("Last Name:" + this.lastname);
+        System.out.println("Address:" + this.address);
+        System.out.println("State:" + this.state);
+        System.out.println("City:" + this.city);
+        System.out.println("Zipcode:" + this.zipcode);
+        System.out.println("Phone Number:" + this.phoneNumber);
+        System.out.println("Email-ID:" + this.email);
     }
 }
