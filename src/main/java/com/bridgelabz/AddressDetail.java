@@ -1,6 +1,11 @@
 package com.bridgelabz;
 
 public class AddressDetail {
+    /**
+     * assigning all the details giving its value
+     *
+     * creating contact details inside AddressBook
+     */
     public String firstname;
     public String lastname;
     public String address;
@@ -10,6 +15,17 @@ public class AddressDetail {
     public String phoneNumber;
     public String email;
 
+    /**
+     * assigning variables to each details
+     * @param firstname
+     * @param lastname
+     * @param address
+     * @param city
+     * @param state
+     * @param zipcode
+     * @param phoneNumber
+     * @param email
+     */
     public AddressDetail(String firstname, String lastname, String address, String city,
                          String state, int zipcode, String phoneNumber, String email) {
         this.firstname = firstname;
@@ -22,7 +38,10 @@ public class AddressDetail {
         this.email = email;
     }
 
-    public void printAddressbook() {
+    /**
+     * display the contact created in address book.
+     */
+    public void printAddressBook() {
         System.out.println("First Name:" + this.firstname);
         System.out.println("Last Name:" + this.lastname);
         System.out.println("Address:" + this.address);
