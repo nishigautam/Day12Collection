@@ -7,8 +7,11 @@ public class AddressBookMain {
      * @return printAddressBook
      */
     public static void main(String[] args) {
-        AddressDetail addressDetail = new AddressDetail("Nishi", "Gautam", "193-Gomtinagar",
+        PersonDetail personDetail = new PersonDetail("Nishi", "Gautam", "193-Gomtinagar",
                 "Lucknow", "UP", 226016, "8948372938", "nishigautam@gmail.com");
-        addressDetail.printAddressBook();
+        personDetail.printAddressBook();
+
+        AddressBook addressBook = new AddressBook();
+        addressBook.addContact();
     }
 }
