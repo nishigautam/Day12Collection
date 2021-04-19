@@ -1,0 +1,95 @@
+package com.bridgelabz;
+
+public class AddressDetail {
+    public String firstname;
+    public String lastname;
+    public String address;
+    public String city;
+    public String state;
+    public int zipcode;
+    public String phoneNumber;
+    public String email;
+
+    public AddressDetail(String firstname, String lastname, String address, String city,
+                         String state, int zipcode, String phoneNumber, String email) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zipcode = zipcode;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname() {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname() {
+        this.lastname = lastname;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress() {
+        this.address = address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity() {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState() {
+        this.state = state;
+    }
+
+    public int getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(int zipcode) {
+        this.zipcode = zipcode;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber() {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail() {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "AddressBook [" + "firstname=" + firstname + ", lastname=" + lastname +
+                ", city=" + city + ", state=" + state + ", zipcode=" + zipcode +
+                ", phoneNumber=" + phoneNumber + ", email=" + email + "]";
+    }
+}
