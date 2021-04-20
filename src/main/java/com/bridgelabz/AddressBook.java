@@ -2,6 +2,7 @@ package com.bridgelabz;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -125,6 +126,27 @@ public class AddressBook implements AddressBookAdd {
     public void searchPersonByState(String firstname) {
         List<PersonDetail> personList = contact.stream().filter(person1 -> person1.getFirstname().equalsIgnoreCase(firstname)).collect(Collectors.toList());
         personList.stream().forEach(System.out::println);
+    }
+
+    /**
+     * UC9: View a person by city or state accross the multiple AddressBook
+     *
+     * @param city and state
+     */
+    @Override
+    public void viewByCity(String city) {
+        List<PersonDetail> personList = contact.stream().filter(person1 -> person1.getCity().equalsIgnoreCase(city)).collect(Collectors.toList());
+        personList.stream().forEach(System.out::println);
+        Map<String, PersonDetail> map = personList.stream().collect(Collectors.toMap(PersonDetail::getFirstname, personDetail -> personDetail));
+        System.out.println();
+    }
+
+    @Override
+    public void viewByState(String state) {
+        List<PersonDetail> personList = contact.stream().filter(person1 -> person1.getState().equalsIgnoreCase(state)).collect(Collectors.toList());
+        personList.stream().forEach(System.out::println);
+        Map<String, PersonDetail> map = personList.stream().collect(Collectors.toMap(PersonDetail::getFirstname, personDetail -> personDetail));
+        System.out.println();
     }
 
     /**

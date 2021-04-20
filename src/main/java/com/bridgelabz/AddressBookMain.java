@@ -19,7 +19,9 @@ public class AddressBookMain {
         while(result) {
             System.out.println("Enter option to make changes : \n[press 1 to add new Contact" +
                                 "\n press 2 to Edit existing contacts" + " \n press 3 to display details " +
-                                "\n press 4 to delete a contact detail " + "\n press 5 to search person by city" + "\n press 6 to search person by state" + "\n press 0 to quit ]");
+                                "\n press 4 to delete a contact detail " + "\n press 5 to search person by city" +
+                                "\n press 6 to search person by state" + "\n press 7 to view person by city" +
+                                "\n press 8 to view person by state" + "\n press 0 to quit ]");
             int option = input.nextInt();
             switch (option) {
                 case 1 :
@@ -47,6 +49,16 @@ public class AddressBookMain {
                     System.out.println("Enter Firstname to search person by state :");
                     String Name = input.next();
                     addressBook.searchPersonByState(Name);
+                    break;
+                case 7 :
+                    System.out.println("Enter the City Name: ");
+                    String city = input.next();
+                    addressBook.viewByCity(city);
+                    break;
+                case 8 :
+                    System.out.println("Enter the State name:");
+                    String state = input.next();
+                    addressBook.viewByState(state);
                     break;
                 default:
                     result = false;
