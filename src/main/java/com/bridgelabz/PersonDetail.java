@@ -15,7 +15,6 @@ public class PersonDetail {
     public String state;
     public int zipcode;
     public String phoneNumber;
-    public String email;
 
     /**
      * assigning variables to each details
@@ -26,10 +25,9 @@ public class PersonDetail {
      * @param state
      * @param zipcode
      * @param phoneNumber
-     * @param email
      */
     public PersonDetail(String firstname, String lastname, String address, String city,
-                        String state, int zipcode, String phoneNumber, String email) {
+                        String state, int zipcode, String phoneNumber ) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;
@@ -37,7 +35,6 @@ public class PersonDetail {
         this.state = state;
         this.zipcode = zipcode;
         this.phoneNumber = phoneNumber;
-        this.email = email;
     }
 
     /**
@@ -51,7 +48,6 @@ public class PersonDetail {
         System.out.println("City:" + this.city);
         System.out.println("Zipcode:" + this.zipcode);
         System.out.println("Phone Number:" + this.phoneNumber);
-        System.out.println("Email-ID:" + this.email);
     }
 
     public String getFirstname() {
@@ -110,18 +106,10 @@ public class PersonDetail {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail() {
-        this.email = email;
-    }
-
     @Override
     public String toString() {
         return "AddressBook [" + "firstname=" + firstname + ", lastname=" + lastname +
                 ", city=" + city + ", state=" + state + ", zipcode=" + zipcode +
-                ", phoneNumber=" + phoneNumber + ", email=" + email + "]";
+                ", phoneNumber=" + phoneNumber + "]";
     }
 }
