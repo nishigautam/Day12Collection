@@ -13,10 +13,13 @@ public class AddressBookMain {
         Scanner input = new Scanner(System.in);
         AddressBook addressBook = new AddressBook();
 
+        /**
+         * switch case for each cases to be performed
+         */
         while(result) {
             System.out.println("Enter option to make changes : \n[press 1 to add new Contact" +
                                 "\n press 2 to Edit existing contacts" + " \n press 3 to display details " +
-                                "\n press 4 to delete a contact detail " + "\n press 0 to quit ]");
+                                "\n press 4 to delete a contact detail " + "\n press 5 to search person by city" + "\n press 6 to search person by state" + "\n press 0 to quit ]");
             int option = input.nextInt();
             switch (option) {
                 case 1 :
@@ -34,6 +37,16 @@ public class AddressBookMain {
                     System.out.println("Enter your Firstname to delete your details :");
                     String firstName = input.next();
                     addressBook.deleteContact(firstName);
+                    break;
+                case 5 :
+                    System.out.println("Enter Firstname to search person by city :");
+                    String name = input.next();
+                    addressBook.searchPersonByCity(name);
+                    break;
+                case 6 :
+                    System.out.println("Enter Firstname to search person by state :");
+                    String Name = input.next();
+                    addressBook.searchPersonByState(Name);
                     break;
                 default:
                     result = false;

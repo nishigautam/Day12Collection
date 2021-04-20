@@ -3,6 +3,7 @@ package com.bridgelabz;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 /**
  * the below method is for adding the contact into address book
@@ -22,7 +23,7 @@ public class AddressBook implements AddressBookAdd {
         System.out.println("Enter Lastname:");
         String lastname = input.nextLine();
         /**
-         * refactor the add contact function
+         * UC6: refactor the add contact function
          * to check no duplicate firstname or lastname exists.
          */
         for(int check = 0; check < contact.size(); check++) {
@@ -107,6 +108,23 @@ public class AddressBook implements AddressBookAdd {
                 System.out.println("Contact Deleted Successfully.!");
             }
         }
+    }
+
+    /**
+     * UC8: Search a person in a city or state accross the multiple AddressBook
+     *
+     * @param firstname
+     */
+    @Override
+    public void searchPersonByCity(String firstname) {
+        List<PersonDetail> personList = contact.stream().filter(person1 -> person1.getFirstname().equalsIgnoreCase(firstname)).collect(Collectors.toList());
+        personList.stream().forEach(System.out::println);
+    }
+
+    @Override
+    public void searchPersonByState(String firstname) {
+        List<PersonDetail> personList = contact.stream().filter(person1 -> person1.getFirstname().equalsIgnoreCase(firstname)).collect(Collectors.toList());
+        personList.stream().forEach(System.out::println);
     }
 
     /**

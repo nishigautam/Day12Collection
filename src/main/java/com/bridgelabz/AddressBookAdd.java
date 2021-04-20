@@ -7,4 +7,6 @@ public interface AddressBookAdd {
     public void addContact();
     public void editContact(String firstname);
     public void deleteContact(String firstname);
+    public void searchPersonByCity(String firstname);
+    public void searchPersonByState(String firstname);
 }
